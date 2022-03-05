@@ -56,6 +56,9 @@ const GlobalStyle = createGlobalStyle`
   #root, #__next {
     isolation: isolate;
   }
+  ul{
+      padding: 0;
+  }
 
 `
 export default GlobalStyle

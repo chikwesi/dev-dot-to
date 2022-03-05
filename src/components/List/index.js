@@ -17,6 +17,21 @@ export const ListItem = ({ title, category, comments, badge }) => {
         </ListItemStyle>);
 }
 
+export const BuildStyledListItem = (Component, { icon = "", name = "", weight }) => {
+    return (
+        <Component style={weight === "bold" ? { '--font-weight': "bold" } : {}} >
+            <FlexRow as="a" style={{ alignItems: "start" }}>
+                {icon}
+                {name}
+            </FlexRow>
+        </Component>);
+}
+
+export const PrimaryLinkListItem = (props) => BuildStyledListItem(PrimaryListLinkStyle, props)
+
+export const SecondaryLinkListItem = (props) => BuildStyledListItem(SecondaryListLinkStyle, props)
+
+
 
 const ListItemStyle = styled.div`
     padding: 0.65rem 1rem;
@@ -41,26 +56,23 @@ const ListItemStyle = styled.div`
     }
 
 `
-export const LinkListItem = ({ icon, name }) => {
-    return (
-        <ListLinkStyle>
-            <FlexRow as="a" style={{ alignItems: "start" }}>
-                {icon}
-                {name}
-            </FlexRow>
-        </ListLinkStyle>);
-}
 
-
-const ListLinkStyle = styled.li`
+const PrimaryListLinkStyle = styled.li`
     border-radius: var(--default-border-radius);
-    padding: 10px;
+    padding: 1rem;
     list-style: none;
+    font-weight: var(--font-weight, normal);
     &:hover{
         background-color: var(--accent-color-light);
         color: var(--accent-color);
-        text-decoration: underline;
         cursor: pointer;
-
     }
 `
+
+const SecondaryListLinkStyle = styled(PrimaryListLinkStyle)`
+    &:hover{
+        background-color: var(--primary-color);
+        color: var(--accent-color);
+    }
+`
+

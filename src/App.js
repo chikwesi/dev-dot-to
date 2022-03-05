@@ -7,7 +7,7 @@ import { MainGrid, FlexCol, FlexRow } from './components/Layout'
 import { AsideList } from './components/AsideList';
 import { LISTING_DATA, HElP_DATA, DISCUSS_DATA, CHALLENGE_DATA, BLOG_DATA, LINKS, POLICY_LINKS } from './mock';
 import Aside from './components/Aside';
-import { LinkListItem } from './components/List';
+import { PrimaryLinkListItem, SecondaryLinkListItem } from './components/List';
 
 function App() {
   const items = [1, 2, 3, 4]
@@ -38,29 +38,32 @@ function App() {
             </Aside>
             <div>
               {LINKS.map(
-                (link, i) => <LinkListItem key={i} {...link}></LinkListItem>
+                (link, i) => <PrimaryLinkListItem key={i} {...link}></PrimaryLinkListItem>
               )}
 
             </div>
             <div>
               <h4>Other</h4>
               {POLICY_LINKS.map(
-                (link, i) => <LinkListItem key={i} {...link}></LinkListItem>
+                (link, i) => <PrimaryLinkListItem key={i} {...link}></PrimaryLinkListItem>
               )}
 
             </div>
 
           </FlexCol>
-          <FlexCol gap="10px">
-            <FlexRow>
-              <p>Relevant</p>
-              <p>Lastest</p>
-              <p>Top</p>
+
+          <FlexCol gap="7px">
+            <FlexRow as="ul" gap="7px">
+              {[
+                { name: "Relevant", weight: "bold" },
+                { name: "Lastest" },
+                { name: "Top" },
+              ].map((item) => <SecondaryLinkListItem {...item}></SecondaryLinkListItem>)}
             </FlexRow>
             {BLOG_DATA.map((item, index) => <Card key={index} {...item}></Card>)}
-
           </FlexCol>
-          <FlexCol gap="10px">
+
+          <FlexCol gap="20px">
             <AsideList {...LISTING_DATA}></AsideList>
             <AsideList {...HElP_DATA}></AsideList>
             <AsideList {...DISCUSS_DATA}></AsideList>

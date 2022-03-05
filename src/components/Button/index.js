@@ -77,7 +77,6 @@ export const A = styled.a`
 `
 export const PrimaryButton = (props) => buildButton(DefaultButtonStyle, props)
 
-
 export const SecondaryButton = (props) => buildButton(SecondaryButtonStyle, props)
 
 export const PrimaryBadge = (props) => buildButton(BadgeStyle, props)
