@@ -1,23 +1,73 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { PrimaryButton, TransparentButton } from './components/Button';
+import Card from './components/card';
+import Toolbar from './components/Toolbar';
+import GlobalStyle from "./presets"
+import { MainGrid, FlexCol, FlexRow } from './components/Layout'
+import { AsideList } from './components/AsideList';
+import { LISTING_DATA, HElP_DATA, DISCUSS_DATA, CHALLENGE_DATA, BLOG_DATA, LINKS, POLICY_LINKS } from './mock';
+import Aside from './components/Aside';
+import { LinkListItem } from './components/List';
 
 function App() {
+  const items = [1, 2, 3, 4]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <GlobalStyle />
+      <FlexCol gap="20px">
+        <Toolbar>
+          Toolbar child
+          <TransparentButton>Login</TransparentButton>
+          <PrimaryButton>Save</PrimaryButton>
+        </Toolbar>
+        <MainGrid >
+          <FlexCol gap="10px">
+            <Aside padding="1rem">
+              <FlexCol gap="10px">
+                <h4>
+                  Join Us
+                </h4>
+                <p>
+                  We're a place where coders share, stay up-to-date and grow their careers.
+                </p>
+                <FlexCol gap="5px">
+                  <PrimaryButton>Create Account</PrimaryButton>
+                  <TransparentButton>Login</TransparentButton>
+                </FlexCol>
+              </FlexCol>
+            </Aside>
+            <div>
+              {LINKS.map(
+                (link, i) => <LinkListItem key={i} {...link}></LinkListItem>
+              )}
+
+            </div>
+            <div>
+              <h4>Other</h4>
+              {POLICY_LINKS.map(
+                (link, i) => <LinkListItem key={i} {...link}></LinkListItem>
+              )}
+
+            </div>
+
+          </FlexCol>
+          <FlexCol gap="10px">
+            <FlexRow>
+              <p>Relevant</p>
+              <p>Lastest</p>
+              <p>Top</p>
+            </FlexRow>
+            {BLOG_DATA.map((item, index) => <Card key={index} {...item}></Card>)}
+
+          </FlexCol>
+          <FlexCol gap="10px">
+            <AsideList {...LISTING_DATA}></AsideList>
+            <AsideList {...HElP_DATA}></AsideList>
+            <AsideList {...DISCUSS_DATA}></AsideList>
+            <AsideList {...CHALLENGE_DATA}></AsideList>
+          </FlexCol>
+        </MainGrid>
+      </FlexCol>
     </div>
   );
 }
