@@ -18,7 +18,8 @@ const GlobalStyle = createGlobalStyle`
    --default-font-color-light: #717171;
    --secondary-card-color: #fafafa;
    --badge-bg-color: #f7d565;
-   --badge-font-color: #834a1e
+   --badge-font-color: #834a1e;
+   --border-color-grey: #e5e5e5
   }
 
   *, *::before, *::after {

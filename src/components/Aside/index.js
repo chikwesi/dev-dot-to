@@ -21,7 +21,7 @@ const Aside = ({ title, action, children, padding }) => {
 export const Container = styled.div`
     padding: var( --aside-padding , 1rem 0rem 0);
     border-radius: var(--default-border-radius);
-    border: #e5e5e5 1px solid;
+    border: var(--border-color-grey) 1px solid;
     background-color: var(--secondary-card-color);
 `
 const Header = styled.div`

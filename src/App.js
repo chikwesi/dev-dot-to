@@ -15,11 +15,7 @@ function App() {
     <div>
       <GlobalStyle />
       <FlexCol gap="20px">
-        <Toolbar>
-          Toolbar child
-          <TransparentButton>Login</TransparentButton>
-          <PrimaryButton>Save</PrimaryButton>
-        </Toolbar>
+        <Toolbar/>
         <MainGrid >
           <FlexCol gap="10px">
             <Aside padding="1rem">

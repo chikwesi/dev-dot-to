@@ -18,6 +18,7 @@ export const FlexCol = styled.div`
 `
 export const MainGrid = styled.div`
     display: grid;
-    grid-template-columns: 2fr 6fr 3fr;
+    grid-template-columns: 2.2fr 6fr 3fr;
     grid-column-gap: 20px;
+    padding: 0 20px;
 `

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { InputGroupStyle } from '../Toolbar';
 
 
 const buildButton = (Component, { children, type }) => {
@@ -27,6 +28,11 @@ const BaseButtonStyle = styled.button`
     &:hover{
         cursor: pointer;
         text-decoration: underline;
+    }
+
+    ${InputGroupStyle} &{
+        position: absolute;
+        right: 0;
     }
 `
 

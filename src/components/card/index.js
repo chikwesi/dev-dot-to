@@ -67,7 +67,7 @@ const ReactionStyle = styled.div`
 const CardWrapper = styled.div`
     padding: 1rem;
     border-radius: var(--default-border-radius);
-    border: #e5e5e5 1px solid;
+    border: var(--border-color-grey) 1px solid;
     background-color: #fff;
 `
 const CardBody = styled.div`
