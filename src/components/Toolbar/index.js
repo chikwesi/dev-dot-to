@@ -29,6 +29,7 @@ const Toolbar = () => {
 const Wrapper = styled.div`
     background-color: var(--primary-bg-color);
     padding: 5px 10px;
+    border-bottom: 1px solid var(--border-color-grey);
 `
 
 const InputStyle = styled.input`

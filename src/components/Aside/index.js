@@ -8,7 +8,7 @@ const Aside = ({ title, action, children, padding }) => {
         <Container style={{ "--aside-padding": padding }}>
             <Header>
                 <Flex gap="20px">
-                    <H1>{title}</H1>
+                    <h3>{title}</h3>
                     {action && <PrimaryButton type='Link'>{action}</PrimaryButton>}
                 </Flex>
             </Header>

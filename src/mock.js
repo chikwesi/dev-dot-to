@@ -341,3 +341,14 @@ export const POLICY_LINKS = [
         name: "Terms of use"
     },
 ]
+
+export const POPULAR_TAGS = [
+    { name: "#javascript" },
+    { name: "#webdev" },
+    { name: "#beginners" },
+    { name: "#programming" },
+    { name: "#tutorial" },
+    { name: "#react" },
+    { name: "#python" },
+    { name: "#productivity" },
+]

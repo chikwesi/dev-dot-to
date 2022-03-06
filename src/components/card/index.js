@@ -19,12 +19,8 @@ const Card = ({ author: { name, dateCreated, imgUrl } = {}, blog: { title, tags,
                 <span></span>
                 <div>
                     <H1>{title}</H1>
-                    <FlexRow>
-                        {tags?.map((tag, i) => <Tag key={i}
-                            style={{
-                                "--hash-color": `#${Math.floor(Math.random() * 16777215).toString(16)}`
-                            }}
-                        >{tag}</Tag>)}
+                    <FlexRow gap="0">
+                        {tags?.map((name, i) => <Tag name={name}></Tag>)}
                     </FlexRow>
                     <Flex>
                         <FlexRow gap="20px">
@@ -54,36 +50,67 @@ const Reaction = ({ children }) => {
         </ReactionStyle>
     );
 }
+
+const Tag = ({ name }) => {
+    let color = Math.floor(Math.random() * 16777215).toString(16);
+    return (
+        <TagStlye style={{
+                "--hash-color": `#${color}`,
+                "--hover-bg": `#${color}0f`,
+                "--hover-border": `#${color}29`
+            }}
+        >
+            {name}
+        </TagStlye>)
+}
+
 const ReactionStyle = styled.div`
     display: flex;
     align-items: center;
     gap: .2rem;
+    &:hover{
+        background-color: var(--hover-bg);
+        border: 1px solid var(--hover-border);
+        border-radius: var(--default-border-radius);
+        cursor: pointer;
+    }
     @media(max-width: ${MEDIA_QUERY_BREAKPOINTS.mobile}){
         span{
             display: none;
         }
     }
 `
+
 const CardWrapper = styled.div`
     padding: 1rem;
     border-radius: var(--default-border-radius);
     border: var(--border-color-grey) 1px solid;
     background-color: #fff;
 `
+
 const CardBody = styled.div`
     display: grid;
     grid-template-columns: .05fr 1fr;
-    font-size: .9rem;
+    font-size: var(--font-szie-sm);
     grid-gap: ${({ gap }) => gap || "10px"};
     align-items: center;
     @media(max-width: ${MEDIA_QUERY_BREAKPOINTS.mobile}){
         grid-template-columns: 1fr;
     }
 `
-const Tag = styled.span`
-   &::before{
+
+const TagStlye = styled.span`
+    padding: 5px;
+    border: 1px solid transparent;
+    &::before{
        content: '#';
        color: var(--hash-color);
-   }
+    }
+    &:hover{
+        background-color: var(--hover-bg);
+        border: 1px solid var(--hover-border);
+        border-radius: var(--default-border-radius);
+        cursor: pointer;
+    }
 `
 export default Card;

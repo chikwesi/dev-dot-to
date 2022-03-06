@@ -5,17 +5,22 @@ import Toolbar from './components/Toolbar';
 import GlobalStyle from "./presets"
 import { MainGrid, FlexCol, FlexRow } from './components/Layout'
 import { AsideList } from './components/AsideList';
-import { LISTING_DATA, HElP_DATA, DISCUSS_DATA, CHALLENGE_DATA, BLOG_DATA, LINKS, POLICY_LINKS } from './mock';
+import { LISTING_DATA, HElP_DATA, DISCUSS_DATA, CHALLENGE_DATA, BLOG_DATA, LINKS, POLICY_LINKS, POPULAR_TAGS } from './mock';
 import Aside from './components/Aside';
 import { PrimaryLinkListItem, SecondaryLinkListItem } from './components/List';
+import ListGroup from './components/ListGroup';
 
 function App() {
-  const items = [1, 2, 3, 4]
+  const Tabs = [
+    { name: "Relevant", weight: "bold" },
+    { name: "Lastest" },
+    { name: "Top" },
+  ]
   return (
     <div>
       <GlobalStyle />
       <FlexCol gap="20px">
-        <Toolbar/>
+        <Toolbar />
         <MainGrid >
           <FlexCol gap="10px">
             <Aside padding="1rem">
@@ -32,29 +37,14 @@ function App() {
                 </FlexCol>
               </FlexCol>
             </Aside>
-            <div>
-              {LINKS.map(
-                (link, i) => <PrimaryLinkListItem key={i} {...link}></PrimaryLinkListItem>
-              )}
-
-            </div>
-            <div>
-              <h4>Other</h4>
-              {POLICY_LINKS.map(
-                (link, i) => <PrimaryLinkListItem key={i} {...link}></PrimaryLinkListItem>
-              )}
-
-            </div>
-
+            <ListGroup links={LINKS}></ListGroup>
+            <ListGroup links={POLICY_LINKS} title="Other"></ListGroup>
+            <ListGroup links={POPULAR_TAGS} title="Popular Tags"></ListGroup>
           </FlexCol>
 
           <FlexCol gap="7px">
-            <FlexRow as="ul" gap="7px">
-              {[
-                { name: "Relevant", weight: "bold" },
-                { name: "Lastest" },
-                { name: "Top" },
-              ].map((item) => <SecondaryLinkListItem {...item}></SecondaryLinkListItem>)}
+            <FlexRow as="ul" gap="0">
+              {Tabs.map((item) => <SecondaryLinkListItem {...item}></SecondaryLinkListItem>)}
             </FlexRow>
             {BLOG_DATA.map((item, index) => <Card key={index} {...item}></Card>)}
           </FlexCol>
