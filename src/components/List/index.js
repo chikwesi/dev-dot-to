@@ -47,10 +47,6 @@ export const ListItemStyle = styled.div`
             color: var(--accent-color);
         }
     }
-    & h4{
-        font-size: var(--h4-size);
-        font-weight: normal;
-    }
     &:last-child{
         border-bottom-left-radius: var(--default-border-radius);
         border-bottom-right-radius: var(--default-border-radius);

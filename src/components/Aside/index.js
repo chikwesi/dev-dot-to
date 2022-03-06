@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { PrimaryOutlineButton } from '../Button';
-import { H2 } from '../Global';
+import { A } from '../Global';
 import { Flex } from '../Layout';
 
 const Aside = ({ title, action, children, padding }) => {
@@ -9,7 +8,7 @@ const Aside = ({ title, action, children, padding }) => {
             <Header>
                 <Flex gap="20px">
                     <h3>{title}</h3>
-                    {action && <PrimaryOutlineButton type='Link'>{action}</PrimaryOutlineButton>}
+                    {action && <A type='Link'>{action}</A>}
                 </Flex>
             </Header>
             {children}

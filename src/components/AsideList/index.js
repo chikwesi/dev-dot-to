@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import Aside from '../Aside';
 import { AsideListItem } from '../List';
 

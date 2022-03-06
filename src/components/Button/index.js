@@ -3,14 +3,6 @@ import { InputGroupStyle } from '../Toolbar';
 
 
 const buildButton = (Component, { children, type, size }) => {
-    if (type === 'Link') {
-        return (
-            <A>
-                {children}
-            </A>
-        )
-    }
-
     return (
         <Component style={
             { "--font-size": size === "lg" && "var(--button-lg-font-size)" }}>
@@ -86,16 +78,6 @@ const BadgeStyle = styled.a`
     color: var(--badge-font-color);
     background-color: var(--badge-bg-color) ;
     border-radius: var(--default-border-radius);
-    &:hover{
-        cursor: pointer;
-    }
-`
-
-export const A = styled.a`
-    padding: 10px 20px;
-    color: var(--accent-color);
-    font-weight: bolder;
-    text-align: center;
     &:hover{
         cursor: pointer;
     }

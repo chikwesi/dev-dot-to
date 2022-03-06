@@ -64,16 +64,13 @@ const GlobalStyle = createGlobalStyle`
   #root, #__next {
     isolation: isolate;
   }
-
-  ul{
-      padding: 0;
-  }
   h3{
       font-size: var(--h3-size);
   }
 
   h4{
-        font-size: var(--h4-size)
+        font-size: var(--h4-size);
+        font-weight: normal;
   }
 `
 export default GlobalStyle

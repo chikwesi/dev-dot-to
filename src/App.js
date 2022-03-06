@@ -5,13 +5,13 @@ import Toolbar from './components/Toolbar';
 import GlobalStyle from "./presets"
 import { MainGrid, FlexCol, FlexRow } from './components/Layout'
 import { AsideList } from './components/AsideList';
-import { LISTING_DATA, HElP_DATA, DISCUSS_DATA, CHALLENGE_DATA, LINKS, POLICY_LINKS, POPULAR_TAGS, TRENDING_LINKS } from './data/mock';
+import { LISTING_DATA, HElP_DATA, DISCUSS_DATA, CHALLENGE_DATA, LINKS, POLICY_LINKS, POPULAR_TAGS, TRENDING_LINKS, SOCIAL_LINKS } from './data/mock';
 import Aside from './components/Aside';
 import { TabLinkListItem } from './components/List';
 import { PrimaryListGroup, SecondaryListGroup } from './components/ListGroup';
-import { Link } from './components/Global';
+import { A, Link } from './components/Global';
 import { BLOG_DATA, BLOG_DATA_2 } from './data/articles';
-import { MaindAd } from './components/Ad';
+import { ContributeBanner, MainBanner, StickerBanner } from './components/Banner';
 
 function App() {
   const Tabs = [
@@ -25,7 +25,7 @@ function App() {
       <FlexCol gap="20px">
         <Toolbar />
         <MainGrid >
-          <FlexCol gap="10px">
+          <FlexCol gap="30px">
             <Aside padding="1rem">
               <FlexCol gap="10px">
                 <h3>
@@ -42,7 +42,12 @@ function App() {
             </Aside>
             <PrimaryListGroup links={LINKS}></PrimaryListGroup>
             <PrimaryListGroup links={POLICY_LINKS} title="Other"></PrimaryListGroup>
+            <FlexRow gap="20px">
+              {SOCIAL_LINKS.map(({ icon }) => icon)}
+            </FlexRow>
             <PrimaryListGroup links={POPULAR_TAGS} title="Popular Tags"></PrimaryListGroup>
+            <StickerBanner></StickerBanner>
+            <ContributeBanner></ContributeBanner>
           </FlexCol>
 
           <FlexCol gap="7px">
@@ -50,7 +55,7 @@ function App() {
               {Tabs.map((item, index) => <TabLinkListItem key={index} {...item}></TabLinkListItem>)}
             </FlexRow>
             {BLOG_DATA.map((item, index) => <Card key={index} {...item}></Card>)}
-            <MaindAd></MaindAd>
+            <MainBanner></MainBanner>
             {BLOG_DATA_2.map((item, index) => <Card key={index} {...item}></Card>)}
           </FlexCol>
 
@@ -60,6 +65,7 @@ function App() {
             <AsideList {...DISCUSS_DATA}></AsideList>
             <AsideList {...CHALLENGE_DATA}></AsideList>
             <SecondaryListGroup links={TRENDING_LINKS} title="trending guides/resources"></SecondaryListGroup>
+            <SecondaryListGroup links={TRENDING_LINKS} title="recently queried"></SecondaryListGroup>
           </FlexCol>
         </MainGrid>
       </FlexCol>

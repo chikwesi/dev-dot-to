@@ -26,3 +26,12 @@ export const Link = styled.a`
         color: var(--accent-color-dark);
         cursor: pointer;
     }`
+
+
+export const A = styled.a`
+    color: var(--accent-color);
+    &:hover{
+        text-decoration: none;
+        cursor: pointer;
+}
+`

@@ -20,6 +20,9 @@ export const BuildListGroup = (ListItem, { title, links = [] }, { padding } = {}
 
 const ListGroupStyle = styled.aside`
     padding: var(--list-group-padding, 0);
+    ul{
+      padding: 0;
+  }
 `
 export const PrimaryListGroup = (props) => BuildListGroup(PrimaryLinkListItem, props)
 
