@@ -9,7 +9,7 @@ const Toolbar = () => {
         <Wrapper>
             <Flex>
                 <FlexRow>
-                    <img height="50px" src='/logo.png' />
+                    <img height="50px" src='/logo.png' alt='logo' />
                     <InputGroupStyle>
                         <InputStyle placeholder='Search...' />
                         <TransparentButton>

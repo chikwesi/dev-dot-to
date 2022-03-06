@@ -10,7 +10,7 @@ export const MainBanner = () => {
         <MainBannerStyle>
             <FlexCol align="center" gap="20px">
                 <FlexRow gap="20px">
-                    <img src='/logo.png' />
+                    <img src='/logo.png' alt='logo' />
                     <div>
                         <h1>
                             <Link>DEV Community</Link> is a community of 824,861 amazing developers
