@@ -15,8 +15,9 @@ export const BuildStyledListItem = (Component, { icon, name, weight }) => {
 
 export const PrimaryLinkListItem = (props) => BuildStyledListItem(PrimaryListLinkStyle, props)
 
-export const SecondaryLinkListItem = (props) => BuildStyledListItem(SecondaryListLinkStyle, props)
+export const TabLinkListItem = (props) => BuildStyledListItem(TabItemStyle, props)
 
+export const SecondaryLinkListItem = (props) => BuildStyledListItem(SecondaryListLinkStyle, props)
 export const AsideListItem = ({ title, category, comments, badge }) => {
     return (
         <ListItemStyle>
@@ -70,7 +71,14 @@ export const PrimaryListLinkStyle = styled.li`
     }
 `
 
+export const TabItemStyle = styled(PrimaryListLinkStyle)`
+    &:hover{
+        background-color: var(--primary-color);
+        color: var(--accent-color);
+    }
+`
 export const SecondaryListLinkStyle = styled(PrimaryListLinkStyle)`
+    border-radius: 0;
     &:hover{
         background-color: var(--primary-color);
         color: var(--accent-color);

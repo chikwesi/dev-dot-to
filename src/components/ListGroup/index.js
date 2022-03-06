@@ -1,16 +1,26 @@
-import { PrimaryLinkListItem } from '../List';
-export const ListGroup = ({ title, links = [] }) => {
+import styled from 'styled-components';
+import { FlexCol } from '../Layout';
+import { PrimaryLinkListItem, SecondaryLinkListItem } from '../List';
+
+export const BuildListGroup = (ListItem, { title, links = [] }, { padding } = {}) => {
     return (
-        <div>
-            {title && <h3>{title}</h3>}
-            {
-                links.map((link, i) => <PrimaryLinkListItem key={i} {...link}></PrimaryLinkListItem>
-                )
-            }
-
-        </div>
-
+        <ListGroupStyle style={{ "--list-group-padding": padding }}>
+            <FlexCol>
+                {title && <h3>{title}</h3>}
+                <ul>
+                    {
+                        links.map((link, i) => <ListItem key={i} {...link}></ListItem>
+                        )
+                    }
+                </ul>
+            </FlexCol>
+        </ListGroupStyle>
     );
 }
 
-export default ListGroup
+const ListGroupStyle = styled.aside`
+    padding: var(--list-group-padding, 0);
+`
+export const PrimaryListGroup = (props) => BuildListGroup(PrimaryLinkListItem, props)
+
+export const SecondaryListGroup = (props) => BuildListGroup(SecondaryLinkListItem, props, { padding: "10px" })

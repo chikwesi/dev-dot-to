@@ -98,21 +98,24 @@ export const BLOG_DATA = [
     {
         author: {
             name: "John Doe",
-            dateCreated: "Jan 30"
+            dateCreated: "Jan 30",
+            imgUrl: "1.jpeg",
         },
-        blog:
-        {
+        blog: {
             title: "How Cryptocurrency Works Explained Visually",
             tags: ['blockchain', "web3", 'beginners'],
             noOfReactions: 5,
             noOfComments: 4,
-            estimatedReadTime: 5
+            estimatedReadTime: 5,
+            isFeatured: true,
+            headerImage: "featured-blog-image.png"
         }
     },
     {
         author: {
             name: "Victor Chi",
-            dateCreated: "Jan 30"
+            dateCreated: "Jan 30",
+            imgUrl: "1.jpeg",
         },
         blog: {
             title: "What is Web3.0",
@@ -125,10 +128,11 @@ export const BLOG_DATA = [
     {
         author: {
             name: "John Doe",
-            dateCreated: "Jan 30"
+            dateCreated: "Jan 30",
+            imgUrl: "1.jpeg",
         },
         blog: {
-            title: "How Cryptocurrency Works Explained Visually",
+            title: "How to automate deploying flask app to AWS via a CI/CD pipeline using GitHub Actions",
             tags: ['blockchain', "web3", 'beginners'],
             noOfReactions: 5,
             noOfComments: 4,
@@ -138,7 +142,8 @@ export const BLOG_DATA = [
     {
         author: {
             name: "John Doe",
-            dateCreated: "Jan 30"
+            dateCreated: "Jan 30",
+            imgUrl: "1.jpeg",
         },
         blog: {
             title: "How Cryptocurrency Works Explained Visually",
@@ -151,7 +156,8 @@ export const BLOG_DATA = [
     {
         author: {
             name: "Jane Doe",
-            dateCreated: "Jan 30"
+            dateCreated: "Jan 30",
+            imgUrl: "1.jpeg",
         },
         blog: {
             title: "How Cryptocurrency Works Explained Visually",
@@ -167,7 +173,7 @@ export const BLOG_DATA = [
 export const LINKS = [
     {
         icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
-            <g class="nc-icon-wrapper">
+            <g>
                 <path fill="#A0041E" d="M13.344 18.702h-2a.5.5 0 01-.5-.5v-7a.5.5 0 01.5-.5h2a.5.5 0 01.5.5v7a.5.5 0 01-.5.5z"></path>
                 <path fill="#FFE8B6" d="M9 20L22 7l13 13v17H9z"></path>
                 <path fill="#FFCC4D" d="M22 20h1v16h-1z"></path>
@@ -182,7 +188,7 @@ export const LINKS = [
     },
     {
         icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
-            <g class="nc-icon-wrapper">
+            <g>
                 <path fill="#FFD983" d="M36 4H14a4 4 0 00-4 4v24H8a4 4 0 000 8h24a4 4 0 004-4V12a4 4 0 000-8z"></path>
                 <path fill="#E39F3D" d="M12 14h24v-2H14l-2-1z"></path>
                 <path fill="#FFE8B6" d="M14 4a4 4 0 00-4 4v24.555A3.955 3.955 0 008 32a4 4 0 104 4V11.445c.59.344 1.268.555 2 .555a4 4 0 000-8z"></path>
@@ -193,7 +199,7 @@ export const LINKS = [
     },
     {
         icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
-            <g class="nc-icon-wrapper">
+            <g>
                 <path fill="#292F33" d="M10 19h24v2H10zm15 15c0 2.208-.792 4-3 4-2.209 0-3-1.792-3-4s.791-2 3-2c2.208 0 3-.208 3 2z"></path>
                 <path fill="#66757F" d="M22 35c-6.627 0-10 1.343-10 3v2h20v-2c0-1.657-3.373-3-10-3z"></path>
                 <path fill="#99AAB5" d="M22 4a9 9 0 00-9 9v7h18v-7a9 9 0 00-9-9z"></path>
@@ -230,7 +236,7 @@ export const LINKS = [
     },
     {
         icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
-            <g class="nc-icon-wrapper">
+            <g >
                 <path fill="#FFD983" d="M36.017 24.181L21.345 9.746C20.687 9.087 19.823 9 18.96 9H8.883C7.029 9 6 10.029 6 11.883v10.082c0 .861.089 1.723.746 2.38L21.3 39.017a3.287 3.287 0 004.688 0l10.059-10.088c1.31-1.312 1.28-3.438-.03-4.748zm-23.596-8.76a1.497 1.497 0 11-2.118-2.117 1.497 1.497 0 012.118 2.117z"></path>
                 <path fill="#D99E82" d="M13.952 11.772a3.66 3.66 0 00-5.179 0 3.663 3.663 0 105.18 5.18 3.664 3.664 0 00-.001-5.18zm-1.53 3.65a1.499 1.499 0 11-2.119-2.12 1.499 1.499 0 012.119 2.12z"></path>
                 <path fill="#C1694F" d="M12.507 14.501a1 1 0 11-1.415-1.414l8.485-8.485a1 1 0 111.415 1.414l-8.485 8.485z"></path>
@@ -240,7 +246,7 @@ export const LINKS = [
     },
     {
         icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
-            <g class="nc-icon-wrapper">
+            <g>
                 <path fill="#FFD983" d="M33 15.06c0 6.439-5 7.439-5 13.44 0 3.098-3.123 3.359-5.5 3.359-2.053 0-6.586-.779-6.586-3.361C15.914 22.5 11 21.5 11 15.06c0-6.031 5.285-10.92 11.083-10.92C27.883 4.14 33 9.029 33 15.06z"></path>
                 <path fill="#CCD6DD" d="M26.167 36.5c0 .828-2.234 2.5-4.167 2.5-1.933 0-4.167-1.672-4.167-2.5 0-.828 2.233-.5 4.167-.5 1.933 0 4.167-.328 4.167.5z"></path>
                 <path fill="#FFCC4D" d="M26.707 14.293a.999.999 0 00-1.414 0L22 17.586l-3.293-3.293a1 1 0 10-1.414 1.414L21 19.414V30a1 1 0 102 0V19.414l3.707-3.707a.999.999 0 000-1.414z"></path>
@@ -252,7 +258,7 @@ export const LINKS = [
     },
     {
         icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
-            <g class="nc-icon-wrapper">
+            <g>
                 <path fill="#F4900C" d="M15 4a8 8 0 00-8 8v8h2v-8a6 6 0 0112 0v8h2v-8a8 8 0 00-8-8z"></path>
                 <path fill="#DD2E44" d="M5 12l2 2 2-2 2 2 2-2 2 2 2-2 2 2 2-2 2 2 2-2v23H5z"></path>
                 <path fill="#FFCC4D" d="M29 9a8 8 0 00-8 8v8h2v-8a6 6 0 0112 0v8h2v-8a8 8 0 00-8-8z"></path>
@@ -269,20 +275,20 @@ export const LINKS = [
     },
     {
         icon: <svg viewBox="0 0 235 234" xmlns="http://www.w3.org/2000/svg" idth="24" height="24" preserveAspectRatio="xMinYMin meet">
-            <g fill="none" fill-rule="evenodd">
+            <g fill="none" fillRule="evenodd">
                 <path fill="#88AEDC" d="M234.04 175.67l-75.69 58.28h47.18L234.04 212z"></path>
                 <path d="M234.04 140.06l-121.93 93.89h.02l121.91-93.87zM133.25.95L.04 103.51v.02L133.27.95z"></path>
-                <path fill="#F58F8E" fill-rule="nonzero" d="M.04.95v30.16L39.21.95z"></path>
-                <path fill="#FEE18A" fill-rule="nonzero" d="M39.21.95L.04 31.11v35.9L85.84.95z"></path>
-                <path fill="#F3F095" fill-rule="nonzero" d="M85.84.95L.04 67.01v36.5L133.25.95z"></path>
-                <path fill="#55C1AE" fill-rule="nonzero" d="M133.27.95L.04 103.53v35.59L179.49.95z"></path>
-                <path fill="#F7B3CE" fill-rule="nonzero" d="M234.04.95h-7.37L.04 175.45v35.93l234-180.18z"></path>
-                <path fill="#88AEDC" fill-rule="nonzero" d="M179.49.95L.04 139.12v36.33L226.67.95z"></path>
-                <path fill="#F58F8E" fill-rule="nonzero" d="M234.04 31.2L.04 211.38v22.57h18.03l215.97-166.3z"></path>
-                <path fill="#FEE18A" fill-rule="nonzero" d="M234.04 67.65L18.07 233.95H64.7l169.34-130.39z"></path>
-                <path fill="#F3F095" fill-rule="nonzero" d="M234.04 103.56L64.7 233.95h47.41l121.93-93.89z"></path>
-                <path fill="#55C1AE" fill-rule="nonzero" d="M234.04 140.08l-121.91 93.87h46.22l75.69-58.28z"></path>
-                <path fill="#F7B3CE" fill-rule="nonzero" d="M234.04 212l-28.51 21.95h28.51z"></path>
+                <path fill="#F58F8E" fillRule="nonzero" d="M.04.95v30.16L39.21.95z"></path>
+                <path fill="#FEE18A" fillRule="nonzero" d="M39.21.95L.04 31.11v35.9L85.84.95z"></path>
+                <path fill="#F3F095" fillRule="nonzero" d="M85.84.95L.04 67.01v36.5L133.25.95z"></path>
+                <path fill="#55C1AE" fillRule="nonzero" d="M133.27.95L.04 103.53v35.59L179.49.95z"></path>
+                <path fill="#F7B3CE" fillRule="nonzero" d="M234.04.95h-7.37L.04 175.45v35.93l234-180.18z"></path>
+                <path fill="#88AEDC" fillRule="nonzero" d="M179.49.95L.04 139.12v36.33L226.67.95z"></path>
+                <path fill="#F58F8E" fillRule="nonzero" d="M234.04 31.2L.04 211.38v22.57h18.03l215.97-166.3z"></path>
+                <path fill="#FEE18A" fillRule="nonzero" d="M234.04 67.65L18.07 233.95H64.7l169.34-130.39z"></path>
+                <path fill="#F3F095" fillRule="nonzero" d="M234.04 103.56L64.7 233.95h47.41l121.93-93.89z"></path>
+                <path fill="#55C1AE" fillRule="nonzero" d="M234.04 140.08l-121.91 93.87h46.22l75.69-58.28z"></path>
+                <path fill="#F7B3CE" fillRule="nonzero" d="M234.04 212l-28.51 21.95h28.51z"></path>
                 <path d="M65.237 77.75c4.514.95 7.774 2.8 11.135 6.3 3.059 3.2 4.965 6.85 5.767 10.95.652 3.45.652 40.55 0 44.05-1.705 9.1-9.479 16.2-19.109 17.45-2.006.25-8.727.5-14.845.5H37V77h12.438c8.828 0 13.342.2 15.8.75zM51.545 117v25.6l5.166-.2c4.464-.15 5.417-.35 7.423-1.5 3.912-2.3 3.962-2.45 3.962-24.2 0-21.2 0-21.2-3.661-23.6-1.806-1.2-2.558-1.35-7.473-1.55l-5.417-.15V117zm79.245-32.75v7.25h-25.58v18h15.549V124H105.21l.1 9.1.15 9.15 12.69.15 12.638.1V157h-14.795c-16.451 0-19.009-.3-21.617-2.6-3.661-3.2-3.46-1.15-3.611-36.3-.1-21.9.05-32.25.401-33.65.702-2.6 3.661-5.8 6.27-6.7 1.554-.55 5.466-.7 17.704-.75h15.648v7.25zm31.647 20.85c3.712 14.25 6.821 25.6 6.922 25.25.15-.35 3.31-12.4 7.071-26.85l6.872-26.25 7.824-.15c5.918-.1 7.874.05 7.874.5s-17.354 66.2-18.357 69.5c-.702 2.3-4.463 7-6.57 8.25-2.658 1.5-6.57 1.75-8.978.5-2.156-1.1-5.015-4.4-6.47-7.5-.902-1.9-15.648-56-19.058-70l-.352-1.35h7.825c7.673 0 7.874 0 8.275 1.1.2.65 3.41 12.8 7.122 27z" fill="#FFF"></path>
             </g>
         </svg>,
@@ -290,7 +296,7 @@ export const LINKS = [
     },
     {
         icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
-            <g class="nc-icon-wrapper">
+            <g>
                 <path fill="#FFAC33" d="M38.724 33.656c-1.239-.01-1.241 1.205-1.241 1.205H22.5c-5.246 0-9.5-4.254-9.5-9.5s4.254-9.5 9.5-9.5 9.5 4.254 9.5 9.5c0 3.062-1.6 5.897-3.852 7.633h5.434C35.022 30.849 36 28.139 36 25.361c0-7.456-6.045-13.5-13.5-13.5-7.456 0-13.5 6.044-13.5 13.5 0 7.455 6.044 13.5 13.5 13.5h14.982s-.003 1.127 1.241 1.139c1.238.012 1.228-1.245 1.228-1.245l.014-3.821s.001-1.267-1.241-1.278zM9 18.26a16.047 16.047 0 014-4.739V13c0-5 5-7 5-8s-1-1-1-1H5C4 4 4 5 4 5c0 1 5 3.333 5 7.69v5.57z"></path>
                 <path fill="#BE1931" d="M17.091 33.166a9.487 9.487 0 01-4.045-8.72l-3.977-.461c-.046.452-.069.911-.069 1.376 0 4.573 2.28 8.608 5.76 11.051l2.331-3.246z"></path>
                 <path fill="#BE1931" d="M10 29.924s-5.188-.812-5 1 5-1 5-1zm0 .312s-4.125 2.688-2.938 3.75S10 30.236 10 30.236z"></path>
@@ -303,7 +309,7 @@ export const LINKS = [
 export const POLICY_LINKS = [
     {
         icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">
-            <g class="nc-icon-wrapper">
+            <g>
                 <path fill="#FFDB5E" d="M38.956 21.916c0-.503-.12-.975-.321-1.404-1.341-4.326-7.619-4.01-16.549-4.221-1.493-.035-.639-1.798-.115-5.668.341-2.517-1.282-6.382-4.01-6.382-4.498 0-.171 3.548-4.148 12.322-2.125 4.688-6.875 2.062-6.875 6.771v10.719c0 1.833.18 3.595 2.758 3.885 2.499.281 1.937 2.062 5.542 2.062h18.044a3.337 3.337 0 003.333-3.334c0-.762-.267-1.456-.698-2.018 1.02-.571 1.72-1.649 1.72-2.899 0-.76-.266-1.454-.696-2.015 1.023-.57 1.725-1.649 1.725-2.901 0-.909-.368-1.733-.961-2.336a3.311 3.311 0 001.251-2.581z"></path>
                 <path fill="#EE9547" d="M27.02 25.249h8.604c1.17 0 2.268-.626 2.866-1.633a.876.876 0 00-1.506-.892 1.588 1.588 0 01-1.361.775h-8.81c-.873 0-1.583-.71-1.583-1.583s.71-1.583 1.583-1.583H32.7a.875.875 0 000-1.75h-5.888a3.337 3.337 0 00-3.333 3.333c0 1.025.475 1.932 1.205 2.544a3.32 3.32 0 00-.998 2.373c0 1.028.478 1.938 1.212 2.549a3.318 3.318 0 00.419 5.08 3.305 3.305 0 00-.852 2.204 3.337 3.337 0 003.333 3.333h5.484a3.35 3.35 0 002.867-1.632.875.875 0 00-1.504-.894 1.594 1.594 0 01-1.363.776h-5.484c-.873 0-1.583-.71-1.583-1.583s.71-1.583 1.583-1.583h6.506a3.35 3.35 0 002.867-1.633.875.875 0 10-1.504-.894 1.572 1.572 0 01-1.363.777h-7.063a1.585 1.585 0 010-3.167h8.091a3.35 3.35 0 002.867-1.632.875.875 0 00-1.504-.894 1.573 1.573 0 01-1.363.776H27.02a1.585 1.585 0 010-3.167z"></path>
             </g>
@@ -351,4 +357,67 @@ export const POPULAR_TAGS = [
     { name: "#react" },
     { name: "#python" },
     { name: "#productivity" },
+]
+
+export const TRENDING_LINKS = [
+    {
+        name: "The Complete Guide to Full Stack Web3 Development"
+    },
+    {
+        name: "Top React JS Frameworks Every Developer Should Know"
+    },
+    {
+        name: "⚠️ Don't try this at home: CSS _as_ the backend - introducing Cascading Server Sheets!"
+    },
+    {
+        name: "Visual Studio Code - Tips & Tricks - Command Palette and its friends"
+    },
+    {
+        name: "19 Valuable GitHub Repositories for Beginner Developers 📚✨"
+    },
+    {
+        name: "C# 11 is Coming! 5 Features that will Blow your Mind 🤯"
+    },
+    {
+        name: "Mastering Python the Right Way"
+    },
+    {
+        name: "Convert nested JSON to simple JSON in Javascript"
+    },
+    {
+        name: "Top 5 state management libraries for React"
+    },
+    {
+        name: "Concurrency in modern programming languages: Rust vs Go vs Java vs Node.js vs Deno vs .NET 6"
+    },
+    {
+        name: "7 Killer One-Liners in JavaScript"
+    },
+    {
+        name: "50 Cool Web And Mobile Project Ideas for 2022"
+    },
+    {
+        name: "10 Must-Know Patterns for Writing Clean Code with React and TypeScript✨🛀"
+    },
+    {
+        name: "Make Your Github Profile Stand Out"
+    },
+    {
+        name: "Moving from JavaScript to TypeScript"
+    },
+    {
+        name: "What’s Wrong With Measuring Developer Performance (+ 10 Best Metrics)"
+    },
+    {
+        name: "Full Stack Developer Skills List👨‍💻"
+    },
+    {
+        name: "Personal Blog Website using HTML CSS JS"
+    },
+    {
+        name: "Should Frontend Devs Care About Performance??"
+    },
+    {
+        name: "10 ReactJS Coding Challenge (💥Coding Interview Prep💥)"
+    },
 ]

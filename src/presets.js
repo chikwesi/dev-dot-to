@@ -1,6 +1,6 @@
 
 import { createGlobalStyle } from 'styled-components';
-import { Header_Four_FontSize, Header_One_FontSize } from './utils/constants';
+import { Header_Four_FontSize, Header_One_FontSize, Header_Three_FontSize, Header_Two_FontSize } from './utils/constants';
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -18,7 +18,10 @@ const GlobalStyle = createGlobalStyle`
    --badge-bg-color: #f7d565;
    --badge-font-color: #834a1e;
    --border-color-grey: #e5e5e5;
+   --grey-color-light-hover: #f6f6f6;
    --h1-size: ${Header_One_FontSize};
+   --h2-size: ${Header_Two_FontSize};
+   --h3-size: ${Header_Three_FontSize};
    --h4-size: ${Header_Four_FontSize};
    --font-szie-sm: 0.9rem;
   }
@@ -61,6 +64,9 @@ const GlobalStyle = createGlobalStyle`
 
   ul{
       padding: 0;
+  }
+  h3{
+      font-size: var(--h3-size);
   }
 
   h4{

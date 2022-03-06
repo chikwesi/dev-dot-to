@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { PrimaryButton } from '../Button';
-import { H1 } from '../global';
+import { H2 } from '../global';
 import { Flex } from '../Layout';
 
 const Aside = ({ title, action, children, padding }) => {
@@ -18,7 +18,7 @@ const Aside = ({ title, action, children, padding }) => {
 }
 
 
-export const Container = styled.div`
+export const Container = styled.aside`
     padding: var( --aside-padding , 1rem 0rem 0);
     border-radius: var(--default-border-radius);
     border: var(--border-color-grey) 1px solid;
