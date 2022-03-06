@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { MEDIA_QUERY_BREAKPOINTS } from '../../utils/constants';
 import { SecondaryButton } from '../Button';
-import { Avatar, H2 } from '../global';
+import { Avatar, H2 } from '../Global';
 import { Flex, FlexCol, FlexRow } from '../Layout';
 import Tag from '../Tag';
 

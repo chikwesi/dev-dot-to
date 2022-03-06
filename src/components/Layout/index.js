@@ -14,6 +14,7 @@ export const FlexRow = styled.div`
 export const FlexCol = styled.div`
     display: flex;
     flex-direction:column;
+    align-items: ${(({ align }) => align || 'stretch')};
     gap: ${({ gap }) => gap || "0px"};
 `
 export const MainGrid = styled.div`

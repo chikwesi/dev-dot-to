@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { PrimaryButton, TransparentButton } from '../Button';
+import { PrimaryOutlineButton, TransparentButton } from '../Button';
 import { Flex, FlexRow } from '../Layout';
 
 
@@ -18,8 +18,8 @@ const Toolbar = () => {
                     </InputGroupStyle>
                 </FlexRow>
                 <FlexRow>
-                    <TransparentButton>Log in</TransparentButton>
-                    <PrimaryButton>Create account</PrimaryButton>
+                    <TransparentButton size="lg">Log in</TransparentButton>
+                    <PrimaryOutlineButton size="lg">Create account</PrimaryOutlineButton>
                 </FlexRow>
             </Flex>
 

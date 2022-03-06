@@ -18,3 +18,11 @@ export const Avatar = ({ url, width, alt }) => {
         />
     )
 }
+
+export const Link = styled.a`
+    color: var(--accent-color);
+    &:hover{
+        text-decoration: underline;
+        color: var(--accent-color-dark);
+        cursor: pointer;
+    }`

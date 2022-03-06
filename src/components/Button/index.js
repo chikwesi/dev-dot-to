@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { InputGroupStyle } from '../Toolbar';
 
 
-const buildButton = (Component, { children, type }) => {
+const buildButton = (Component, { children, type, size }) => {
     if (type === 'Link') {
         return (
             <A>
@@ -12,7 +12,8 @@ const buildButton = (Component, { children, type }) => {
     }
 
     return (
-        <Component>
+        <Component style={
+            { "--font-size": size === "lg" && "var(--button-lg-font-size)" }}>
             {children}
         </Component>
     )
@@ -22,6 +23,7 @@ const BaseButtonStyle = styled.button`
     background-color: var(--primary-button-bg-color);
     padding: 10px 20px;
     text-align: center;
+    font-size:  var(--font-size , var(--button-font-size));
     outline: none;
     border: green;
     border-radius: var(--default-border-radius);
@@ -44,6 +46,15 @@ const DefaultButtonStyle = styled(BaseButtonStyle)`
         color: var(--primary-color);
     }
 `
+const PrimaryButtonStyle = styled(BaseButtonStyle)`
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    &:hover{
+        background-color: var(--accent-color-dark);
+        text-decoration: none;
+    }
+`
 
 const SecondaryButtonStyle = styled(BaseButtonStyle)`
     background-color: var(--secondary-button-bg-color);
@@ -52,12 +63,20 @@ const SecondaryButtonStyle = styled(BaseButtonStyle)`
         background-color: var(--secondary-button-bg-hover);
     }
 `
-
 const TransparentButtonStyle = styled(BaseButtonStyle)`
     background-color: var(--primary-button-bg-color);
     &:hover{
         background-color: var(--accent-color-light);
         color: var(--accent-color);
+    }
+`
+const TransparentPrimaryButtonStyle = styled(BaseButtonStyle)`
+    background-color: var(--primary-button-bg-color);
+    color: var(--accent-color);
+    &:hover{
+        background-color: var(--grey-color-light-hover);
+        text-decoration: none;
+        color: var(--accent-color-dark);
     }
 `
 
@@ -81,12 +100,10 @@ export const A = styled.a`
         cursor: pointer;
     }
 `
-export const PrimaryButton = (props) => buildButton(DefaultButtonStyle, props)
-
+export const PrimaryOutlineButton = (props) => buildButton(DefaultButtonStyle, props)
+export const PrimaryButton = (props) => buildButton(PrimaryButtonStyle, props)
 export const SecondaryButton = (props) => buildButton(SecondaryButtonStyle, props)
-
 export const PrimaryBadge = (props) => buildButton(BadgeStyle, props)
-
 export const TransparentButton = (props) => buildButton(TransparentButtonStyle, props)
-
+export const TransparentPrimaryButton = (props) => buildButton(TransparentPrimaryButtonStyle, props)
 

@@ -7,10 +7,13 @@ const GlobalStyle = createGlobalStyle`
    --primary-color: #fff;
    --primary-bg-color: #fff;
    --primary-button-bg-color: transparent;
-   --accent-color: #5b6cdf;
+   --accent-color: #3b49df;
    --accent-color-light: #e7e9f7;
+   --accent-color-dark: #2f3ab2;
    --secondary-button-bg-color: #d7d7d8;
    --secondary-button-bg-hover: #bdbdbd;
+   --button-font-size: 1rem;
+   --button-lg-font-size: 1.2rem;
    --default-border-radius: 0.5rem;
    --default-font-color: #3a3a3a;
    --default-font-color-light: #717171;
@@ -18,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
    --badge-bg-color: #f7d565;
    --badge-font-color: #834a1e;
    --border-color-grey: #e5e5e5;
-   --grey-color-light-hover: #f6f6f6;
+   --grey-color-light-hover: #00000009;
    --h1-size: ${Header_One_FontSize};
    --h2-size: ${Header_Two_FontSize};
    --h3-size: ${Header_Three_FontSize};
