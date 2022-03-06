@@ -1,7 +1,7 @@
 import Card from './components/Card';
 import Toolbar from './components/Toolbar';
-import GlobalStyle from "./presets"
-import { MainGrid, FlexCol, FlexRow } from './components/Layout'
+import GlobalStyle from "./presets";
+import { MainGrid, FlexCol, FlexRow } from './components/Layout';
 import { AsideList } from './components/AsideList';
 import { LISTING_DATA, HElP_DATA, DISCUSS_DATA, CHALLENGE_DATA, LINKS, POLICY_LINKS, POPULAR_TAGS, TRENDING_LINKS, SOCIAL_LINKS } from './data/mock';
 import { TabLinkListItem } from './components/List';
