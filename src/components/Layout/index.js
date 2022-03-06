@@ -7,12 +7,14 @@ export const Flex = styled.div`
 
 export const FlexRow = styled.div`
     display: flex;
+    padding: 0px;
     gap: ${({ gap }) => gap || "10px"};
     align-items: center;
 `
 
 export const FlexCol = styled.div`
     display: flex;
+    padding: 0px;
     flex-direction:column;
     align-items: ${(({ align }) => align || 'stretch')};
     gap: ${({ gap }) => gap || "0px"};

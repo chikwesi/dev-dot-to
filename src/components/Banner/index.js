@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Aside from '../Aside'
-import { PrimaryButton, TransparentPrimaryButton } from '../Button'
+import { PrimaryButton, PrimaryOutlineButton, TransparentButton, TransparentPrimaryButton } from '../Button'
 import { A, Link } from '../Global'
 import { FlexCol, FlexRow } from '../Layout'
 
@@ -29,7 +29,26 @@ export const MainBanner = () => {
     )
 
 }
+export const DevCommunityBanner = () => {
 
+    return (
+        <Aside padding="1rem">
+            <FlexCol gap="10px">
+                <h3>
+                    <Link>DEV Community</Link> is a community of 824,861 amazing developers
+                </h3>
+                <p>
+                    We're a place where coders share, stay up-to-date and grow their careers.
+                </p>
+                <FlexCol gap="5px">
+                    <PrimaryOutlineButton>Create Account</PrimaryOutlineButton>
+                    <TransparentButton>Login</TransparentButton>
+                </FlexCol>
+            </FlexCol>
+        </Aside>
+    )
+
+}
 export const ContributeBanner = () => {
 
     return (

@@ -11,7 +11,7 @@ import { TabLinkListItem } from './components/List';
 import { PrimaryListGroup, SecondaryListGroup } from './components/ListGroup';
 import { A, Link } from './components/Global';
 import { BLOG_DATA, BLOG_DATA_2 } from './data/articles';
-import { ContributeBanner, MainBanner, StickerBanner } from './components/Banner';
+import { ContributeBanner, DevCommunityBanner, MainBanner, StickerBanner } from './components/Banner';
 
 function App() {
   const Tabs = [
@@ -25,21 +25,8 @@ function App() {
       <FlexCol gap="20px">
         <Toolbar />
         <MainGrid >
-          <FlexCol gap="30px">
-            <Aside padding="1rem">
-              <FlexCol gap="10px">
-                <h3>
-                  <Link>DEV Community</Link> is a community of 824,861 amazing developers
-                </h3>
-                <p>
-                  We're a place where coders share, stay up-to-date and grow their careers.
-                </p>
-                <FlexCol gap="5px">
-                  <PrimaryOutlineButton>Create Account</PrimaryOutlineButton>
-                  <TransparentButton>Login</TransparentButton>
-                </FlexCol>
-              </FlexCol>
-            </Aside>
+          <FlexCol gap="20px">
+            <DevCommunityBanner></DevCommunityBanner>
             <PrimaryListGroup links={LINKS}></PrimaryListGroup>
             <PrimaryListGroup links={POLICY_LINKS} title="Other"></PrimaryListGroup>
             <FlexRow gap="20px">
