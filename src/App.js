@@ -1,17 +1,14 @@
-
-import { PrimaryButton, PrimaryOutlineButton, TransparentButton } from './components/Button';
 import Card from './components/Card';
 import Toolbar from './components/Toolbar';
 import GlobalStyle from "./presets"
 import { MainGrid, FlexCol, FlexRow } from './components/Layout'
 import { AsideList } from './components/AsideList';
 import { LISTING_DATA, HElP_DATA, DISCUSS_DATA, CHALLENGE_DATA, LINKS, POLICY_LINKS, POPULAR_TAGS, TRENDING_LINKS, SOCIAL_LINKS } from './data/mock';
-import Aside from './components/Aside';
 import { TabLinkListItem } from './components/List';
 import { PrimaryListGroup, SecondaryListGroup } from './components/ListGroup';
-import { A, Link } from './components/Global';
 import { BLOG_DATA, BLOG_DATA_2 } from './data/articles';
 import { ContributeBanner, DevCommunityBanner, MainBanner, StickerBanner } from './components/Banner';
+import { A } from './components/Global';
 
 function App() {
   const Tabs = [
@@ -30,7 +27,7 @@ function App() {
             <PrimaryListGroup links={LINKS}></PrimaryListGroup>
             <PrimaryListGroup links={POLICY_LINKS} title="Other"></PrimaryListGroup>
             <FlexRow gap="20px">
-              {SOCIAL_LINKS.map(({ icon }) => icon)}
+              {SOCIAL_LINKS.map(({ icon }, i) => <A key={i}>{icon}</A>)}
             </FlexRow>
             <PrimaryListGroup links={POPULAR_TAGS} title="Popular Tags"></PrimaryListGroup>
             <StickerBanner></StickerBanner>
