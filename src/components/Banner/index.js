@@ -21,8 +21,15 @@ export const MainBanner = () => {
                     </div>
                 </FlexRow>
                 <FlexCol gap="5px">
-                    <PrimaryButton size="lg">Create Account</PrimaryButton>
-                    <TransparentPrimaryButton size="lg">Login</TransparentPrimaryButton>
+                    <PrimaryButton
+                        link="https://dev.to/enter?state=new-user"
+                        size="lg">
+                        Create Account
+                    </PrimaryButton>
+                    <TransparentPrimaryButton
+                        link="https://dev.to/enter"
+                        size="lg">Login
+                    </TransparentPrimaryButton>
                 </FlexCol>
             </FlexCol>
         </MainBannerStyle>
@@ -41,8 +48,13 @@ export const DevCommunityBanner = () => {
                     We're a place where coders share, stay up-to-date and grow their careers.
                 </p>
                 <FlexCol gap="5px">
-                    <PrimaryOutlineButton>Create Account</PrimaryOutlineButton>
-                    <TransparentButton>Login</TransparentButton>
+                    <PrimaryOutlineButton
+                        link="https://dev.to/enter?state=new-user"
+                    >Create Account
+                    </PrimaryOutlineButton>
+                    <TransparentButton
+                        link="https://dev.to/enter">Login
+                    </TransparentButton>
                 </FlexCol>
             </FlexCol>
         </Aside>

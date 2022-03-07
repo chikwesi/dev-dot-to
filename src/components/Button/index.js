@@ -2,20 +2,22 @@ import styled from 'styled-components';
 import { InputGroupStyle } from '../Toolbar';
 
 
-const buildButton = (Component, { children, type, size }) => {
+const buildButton = (Component, { children, link, size }) => {
     return (
-        <Component style={
+        <Component href={link} style={
             { "--font-size": size === "lg" && "var(--button-lg-font-size)" }}>
             {children}
         </Component>
     )
 }
 
-const BaseButtonStyle = styled.button`
+const BaseButtonStyle = styled.a`
     background-color: var(--primary-button-bg-color);
     padding: 10px 20px;
     text-align: center;
-    font-size:  var(--font-size , var(--button-font-size));
+    font-size:  var(--font-size, var(--button-font-size));
+    text-decoration: none;
+    color: var(--default-font-color);
     outline: none;
     border: green;
     border-radius: var(--default-border-radius);

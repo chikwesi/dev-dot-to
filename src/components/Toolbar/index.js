@@ -18,8 +18,8 @@ const Toolbar = () => {
                     </InputGroupStyle>
                 </FlexRow>
                 <FlexRow>
-                    <TransparentButton size="lg">Log in</TransparentButton>
-                    <PrimaryOutlineButton size="lg">Create account</PrimaryOutlineButton>
+                    <TransparentButton link="https://dev.to/enter" size="lg">Log in</TransparentButton>
+                    <PrimaryOutlineButton link="https://dev.to/enter?state=new-user" size="lg">Create account</PrimaryOutlineButton>
                 </FlexRow>
             </Flex>
 
