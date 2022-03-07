@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { MEDIA_QUERY_BREAKPOINTS } from '../../utils/constants';
 import { PrimaryOutlineButton, TransparentButton, TransparentButtonStyle } from '../Button';
 import { Flex, FlexRow } from '../Layout';
@@ -19,7 +19,9 @@ const Toolbar = () => {
                     </InputGroupStyle>
                 </FlexRow>
                 <FlexRow>
-                    <TransparentButton link="https://dev.to/enter" >Log in</TransparentButton>
+                    <HidesOnMobile>
+                        <TransparentButton link="https://dev.to/enter" >Log in</TransparentButton>
+                    </HidesOnMobile>
                     <PrimaryOutlineButton link="https://dev.to/enter?state=new-user" >Create account</PrimaryOutlineButton>
                 </FlexRow>
             </Flex>
@@ -59,6 +61,12 @@ const InputIconStyle = styled(TransparentButtonStyle)`
     @media(max-width: ${MEDIA_QUERY_BREAKPOINTS.mobile}){
         position: static;
         width: auto;
+    }
+`
+
+const HidesOnMobile = styled.span`
+    @media(max-width: ${MEDIA_QUERY_BREAKPOINTS.mobile}){
+       display: none;
     }
 `
 export default Toolbar;
