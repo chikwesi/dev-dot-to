@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { MEDIA_QUERY_BREAKPOINTS } from '../../utils/constants';
 import { PrimaryOutlineButton, TransparentButton, TransparentButtonStyle } from '../Button';
 import { Flex, FlexRow } from '../Layout';
