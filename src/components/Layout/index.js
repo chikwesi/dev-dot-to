@@ -28,8 +28,11 @@ export const MainGrid = styled.div`
 
     @media(max-width: ${MEDIA_QUERY_BREAKPOINTS.tablet}){
         grid-template-columns: 2fr 6fr;
+        & > div:last-child{
+            display: none;
+        }
     }
-    
+
     @media(max-width: ${MEDIA_QUERY_BREAKPOINTS.mobile}){
         & > div:first-child{
             display: none;
