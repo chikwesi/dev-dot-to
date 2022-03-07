@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { MEDIA_QUERY_BREAKPOINTS } from '../../utils/constants';
 
 export const Flex = styled.div`
     display: flex;
@@ -24,4 +25,17 @@ export const MainGrid = styled.div`
     grid-template-columns: 2.2fr 6fr 3fr;
     grid-column-gap: 20px;
     padding: 0 20px;
+
+    @media(max-width: ${MEDIA_QUERY_BREAKPOINTS.tablet}){
+        grid-template-columns: 2fr 6fr;
+    }
+    
+    @media(max-width: ${MEDIA_QUERY_BREAKPOINTS.mobile}){
+        & > div:first-child{
+            display: none;
+        }
+        padding: 0;
+        grid-template-columns: 1fr;
+    }
+
 `

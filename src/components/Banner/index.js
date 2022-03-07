@@ -23,12 +23,12 @@ export const MainBanner = () => {
                 <FlexCol gap="5px">
                     <PrimaryButton
                         link="https://dev.to/enter?state=new-user"
-                        size="lg">
+                        >
                         Create Account
                     </PrimaryButton>
                     <TransparentPrimaryButton
                         link="https://dev.to/enter"
-                        size="lg">Login
+                        >Login
                     </TransparentPrimaryButton>
                 </FlexCol>
             </FlexCol>

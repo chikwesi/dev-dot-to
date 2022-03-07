@@ -4,5 +4,6 @@ export const Header_Three_FontSize = "1.4rem"
 export const Header_Four_FontSize = "1.1rem"
 export const MEDIA_QUERY_BREAKPOINTS = {
     //TODO: COMPLETE
-    mobile: '700px'
+    mobile: '768px',
+    tablet: '992px'
 }

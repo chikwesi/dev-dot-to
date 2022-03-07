@@ -7,14 +7,13 @@ export const H2 = styled.h2`
 
 export const AvatarStyle = styled.img`
     border-radius: 50%;
-    width: var(--image-width, 50px);
+    width: 100%;
 `
 
-export const Avatar = ({ url, width, alt }) => {
+export const Avatar = ({ url, alt }) => {
     return (
         <AvatarStyle
             src={url} alt={alt || 'avatar'}
-            style={{ "--image-wdth": width }}
         />
     )
 }

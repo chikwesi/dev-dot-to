@@ -13,7 +13,7 @@ const Card = ({
         <CardWrapper>
             {isFeatured && <CardImage src={`/${headerImage}`} alt={title} />}
             <CardHeader gap="20px">
-                <Avatar url={`/avatar/${imgUrl}`} width="5%" alt='blog author' />
+                <Avatar url={`/avatar/${imgUrl}`} alt='blog author' />
                 <div>
                     <p>{name}</p>
                     <p>{dateCreated}</p>
@@ -76,12 +76,16 @@ const CardWrapper = styled.div`
     border-radius: var(--default-border-radius);
     border: var(--border-color-grey) 1px solid;
     background-color: #fff;
+
+    @media(max-width: ${MEDIA_QUERY_BREAKPOINTS.mobile}){
+        border-radius: 0;
+    }
 `
 
 const CardGrid = styled.div`
     padding: 0rem 1.3rem;
     display: grid;
-    grid-template-columns: .05fr 1fr;
+    grid-template-columns: 35px 1fr;
     font-size: var(--font-szie-sm);
     grid-gap: ${({ gap }) => gap || "10px"};
 `
@@ -89,6 +93,10 @@ const CardGrid = styled.div`
 const CardImage = styled.img`
     border-top-left-radius: var(--default-border-radius);
     border-top-right-radius: var(--default-border-radius);
+
+    @media(max-width: ${MEDIA_QUERY_BREAKPOINTS.mobile}){
+        border-radius: 0;
+    }
 `
 
 const CardHeader = styled(CardGrid)`
