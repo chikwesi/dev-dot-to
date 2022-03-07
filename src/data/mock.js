@@ -26,7 +26,7 @@ export const LISTING_DATA = {
         }
     ],
     footer: {
-        action: "create listing"
+        action: "Create a listing"
     },
 }
 

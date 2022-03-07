@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { A } from '../Global';
 import { Flex } from '../Layout';
 
-const Aside = ({ title, action, children, padding }) => {
+const Aside = ({ title, action, children, padding, footer }) => {
     return (
         <Container style={{ "--aside-padding": padding }}>
             <Header>
@@ -12,6 +12,12 @@ const Aside = ({ title, action, children, padding }) => {
                 </Flex>
             </Header>
             {children}
+            {
+                footer &&
+                <Footer>
+                    {footer.action}
+                </Footer>
+            }
         </Container>)
         ;
 }
@@ -23,8 +29,18 @@ export const Container = styled.aside`
     border: var(--border-color-grey) 1px solid;
     background-color: var(--secondary-card-color);
 `
+
 const Header = styled.div`
-    padding: 0 1rem
+    padding: 0 1rem;
+`
+
+const Footer = styled.div`
+    text-align: center;
+    padding: 1rem;
+    &:hover{
+        color: var(--accent-color);
+        cursor: pointer;
+    }
 `
 
 export default Aside;
