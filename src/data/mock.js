@@ -344,6 +344,69 @@ export const TRENDING_LINKS = [
         name: "10 ReactJS Coding Challenge (💥Coding Interview Prep💥)"
     },
 ]
+
+export const RECENTLY_QUERIED = [
+    {
+        name: "JavaScript Shift"
+    },
+    {
+        name: "Letsencrypt Wildcard"
+    },
+    {
+        name: "Rails Transaction"
+    },
+    {
+        name: "Windows Terminal Customization"
+    },
+    {
+        name: "JavaScript Interview Questions and Answers"
+    },
+    {
+        name: "JavaScript Range"
+    },
+    {
+        name: "Django Allauth"
+    },
+    {
+        name: "CSS Triangle"
+    },
+    {
+        name: "gRPC vs REST"
+    },
+    {
+        name: "Spotify Shuffle Sucks"
+    },
+    {
+        name: "Pseudo Code"
+    },
+    {
+        name: "Landing Page Template"
+    },
+    {
+        name: "How to Click Faster"
+    },
+    {
+        name: "React PDF"
+    },
+    {
+        name: "Web Application Development"
+    },
+    {
+        name: "Install Gdb Mac"
+    },
+    {
+        name: "Python Package Structure"
+    },
+    {
+        name: "What Is an Interpreted Language"
+    },
+    {
+        name: "Production Environment"
+    },
+    {
+        name: "Discord Embed"
+    },
+]
 export const SOCIAL_LINKS = [
     {
         name: "twitter",

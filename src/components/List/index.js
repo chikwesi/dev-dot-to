@@ -34,7 +34,7 @@ export const AsideListItem = ({ title, category, comments, badge }) => {
 }
 
 export const ListItemStyle = styled.div`
-    padding: 0.65rem 1rem;
+    padding: 1.3rem 1rem;
     border-bottom: 1px solid #f3f3f3;
     & p{
         color: var(--default-font-color-light);

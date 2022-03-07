@@ -3,7 +3,7 @@ import Toolbar from './components/Toolbar';
 import GlobalStyle from "./presets";
 import { MainGrid, FlexCol, FlexRow } from './components/Layout';
 import { AsideList } from './components/AsideList';
-import { LISTING_DATA, HElP_DATA, DISCUSS_DATA, CHALLENGE_DATA, LINKS, POLICY_LINKS, POPULAR_TAGS, TRENDING_LINKS, SOCIAL_LINKS } from './data/mock';
+import { LISTING_DATA, HElP_DATA, DISCUSS_DATA, CHALLENGE_DATA, LINKS, POLICY_LINKS, POPULAR_TAGS, TRENDING_LINKS, SOCIAL_LINKS, RECENTLY_QUERIED } from './data/mock';
 import { TabLinkListItem } from './components/List';
 import { PrimaryListGroup, SecondaryListGroup } from './components/ListGroup';
 import { BLOG_DATA, BLOG_DATA_2 } from './data/articles';
@@ -49,7 +49,7 @@ function App() {
             <AsideList {...DISCUSS_DATA}></AsideList>
             <AsideList {...CHALLENGE_DATA}></AsideList>
             <SecondaryListGroup links={TRENDING_LINKS} title="trending guides/resources"></SecondaryListGroup>
-            <SecondaryListGroup links={TRENDING_LINKS} title="recently queried"></SecondaryListGroup>
+            <SecondaryListGroup links={RECENTLY_QUERIED} title="recently queried"></SecondaryListGroup>
           </FlexCol>
         </MainGrid>
       </FlexCol>
