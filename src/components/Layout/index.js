@@ -31,6 +31,9 @@ export const MainGrid = styled.div`
         & > div:last-child{
             display: none;
         }
+        & > div:first-child{
+            display: none;
+        }
     }
 
     @media(max-width: ${MEDIA_QUERY_BREAKPOINTS.mobile}){
