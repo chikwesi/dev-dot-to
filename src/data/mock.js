@@ -1,6 +1,6 @@
 export const LISTING_DATA = {
     header: {
-        title: "Listing",
+        title: "Listings",
         action: "See all"
     },
     items: [
@@ -68,6 +68,18 @@ export const DISCUSS_DATA = {
     ]
 }
 
+export const EXPLAINLIKEIMFIVE_DATA = {
+    header: {
+        title: "#explainlikeimfive",
+    },
+    items: [
+        {
+            title: "Explain the difference between Frontend Developer and Backend Developer?",
+            comments: 1
+        }
+    ]
+}
+
 export const CHALLENGE_DATA = {
     header: {
         title: "#challenge",
@@ -84,15 +96,52 @@ export const CHALLENGE_DATA = {
         {
             title: "Why is people so bad at css?",
             badge: "New"
-        }, {
-            title: "Why is people so bad at css?",
-            badge: "New"
-        }, {
-            title: "Why is people so bad at css?",
-            badge: "New"
         },
     ]
 }
+
+export const META_DATA = {
+    header: {
+        title: "#meta",
+    },
+    items: [
+        {
+            title: "Why is people so bad at css?",
+            comments: 5
+        },
+        {
+            title: "Why is people so bad at css?",
+            comments: 5
+        },
+        {
+            title: "Why is people so bad at css?",
+            comments: 5
+        }, {
+            title: "Why is people so bad at css?",
+            comments: 5
+        }, {
+            title: "Why is people so bad at css?",
+            comments: 5
+        },
+    ]
+}
+
+export const WATERCOOLER_DATA = {
+    header: {
+        title: "#watercooler",
+    },
+    items: [
+        {
+            title: "What do you do when stack overflow is down?",
+            comments: 1
+        },
+        {
+            title: "I made my first graphql project",
+            comments: 5
+        }
+    ]
+}
+
 export const LINKS = [
     {
         icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24" height="24">

@@ -23,8 +23,8 @@ export const FlexCol = styled.div`
 export const MainGrid = styled.div`
     display: grid;
     grid-template-columns: 2.2fr 6fr 3fr;
-    grid-column-gap: 20px;
-    padding: 0 20px;
+    grid-column-gap: 16px;
+    padding: 0 16px;
 
     @media(max-width: ${MEDIA_QUERY_BREAKPOINTS.tablet}){
         grid-template-columns: 2fr 6fr;

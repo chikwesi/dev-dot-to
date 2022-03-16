@@ -3,7 +3,7 @@ import Toolbar from './components/Toolbar';
 import GlobalStyle from "./presets";
 import { MainGrid, FlexCol, FlexRow } from './components/Layout';
 import { AsideList } from './components/AsideList';
-import { LISTING_DATA, HElP_DATA, DISCUSS_DATA, CHALLENGE_DATA, LINKS, POLICY_LINKS, POPULAR_TAGS, TRENDING_LINKS, SOCIAL_LINKS, RECENTLY_QUERIED } from './data/mock';
+import { LISTING_DATA, HElP_DATA, DISCUSS_DATA, CHALLENGE_DATA, LINKS, POLICY_LINKS, POPULAR_TAGS, TRENDING_LINKS, SOCIAL_LINKS, RECENTLY_QUERIED, META_DATA, WATERCOOLER_DATA, EXPLAINLIKEIMFIVE_DATA } from './data/mock';
 import { TabLinkListItem } from './components/List';
 import { PrimaryListGroup, SecondaryListGroup } from './components/ListGroup';
 import { BLOG_DATA, BLOG_DATA_2 } from './data/articles';
@@ -19,14 +19,14 @@ function App() {
   return (
     <div>
       <GlobalStyle />
-      <FlexCol gap="20px">
+      <FlexCol gap="16px">
         <Toolbar />
         <MainGrid >
-          <FlexCol gap="20px">
+          <FlexCol gap="16px">
             <DevCommunityBanner></DevCommunityBanner>
             <PrimaryListGroup links={LINKS}></PrimaryListGroup>
             <PrimaryListGroup links={POLICY_LINKS} title="Other"></PrimaryListGroup>
-            <FlexRow gap="20px">
+            <FlexRow gap="16px">
               {SOCIAL_LINKS.map(({ icon }, i) => <A key={i}>{icon}</A>)}
             </FlexRow>
             <PrimaryListGroup links={POPULAR_TAGS} title="Popular Tags"></PrimaryListGroup>
@@ -43,11 +43,14 @@ function App() {
             {BLOG_DATA_2.map((item, index) => <Card key={index} {...item}></Card>)}
           </FlexCol>
 
-          <FlexCol gap="20px">
+          <FlexCol gap="16px">
             <AsideList {...LISTING_DATA}></AsideList>
             <AsideList {...HElP_DATA}></AsideList>
             <AsideList {...DISCUSS_DATA}></AsideList>
+            <AsideList {...EXPLAINLIKEIMFIVE_DATA}></AsideList>
             <AsideList {...CHALLENGE_DATA}></AsideList>
+            <AsideList {...META_DATA}></AsideList>
+            <AsideList {...WATERCOOLER_DATA}></AsideList>
             <SecondaryListGroup links={TRENDING_LINKS} title="trending guides/resources"></SecondaryListGroup>
             <SecondaryListGroup links={RECENTLY_QUERIED} title="recently queried"></SecondaryListGroup>
           </FlexCol>

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const H2 = styled.h2`
-    font-size: var(--h2-size);
+    font-size: var(--custom-h2-size, var(--h2-size));
     color: #000;
 `
 

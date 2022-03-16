@@ -22,7 +22,7 @@ const Card = ({
             <CardBody gap="20px">
                 <span></span>
                 <FlexCol>
-                    <H2>{title}</H2>
+                    <H2 style={{"--custom-h2-size": isFeatured && '1.92rem'}}>{title}</H2>
                     <FlexRow gap="0">
                         {tags?.map((name, i) => <Tag key={i} name={name}></Tag>)}
                     </FlexRow>
